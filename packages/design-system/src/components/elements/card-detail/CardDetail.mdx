@@ -1,0 +1,43 @@
+{/* CardDetail.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as CardDetailStories from './CardDetail.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={CardDetailStories} />
+
+# CardDetail
+
+Primary UI component for user interaction
+
+```js
+import { CardDetail } from '@portfolio/design-system';
+```
+
+<Primary />
+
+## API
+
+CardDetail has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

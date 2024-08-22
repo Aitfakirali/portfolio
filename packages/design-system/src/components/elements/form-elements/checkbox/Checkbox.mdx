@@ -1,0 +1,41 @@
+{/* Checkbox.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as CheckboxStories from './Checkbox.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+```js
+import { Checkbox } from '@portfolio/design-system';
+```
+
+<Primary />
+
+## API
+
+Checkbox has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

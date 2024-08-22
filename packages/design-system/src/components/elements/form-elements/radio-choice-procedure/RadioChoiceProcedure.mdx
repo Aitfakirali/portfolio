@@ -1,0 +1,41 @@
+{/* RadioChoiceProcedure.mdx */}
+
+import {
+  Meta,
+  Controls,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as RadioChoiceProcedureStories from './RadioChoiceProcedure.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={RadioChoiceProcedureStories} />
+
+# Choice Procedure
+
+Choice Procedure card
+
+```js
+import { RadioChoiceProcedure } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Choice Procedure card has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

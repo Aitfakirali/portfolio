@@ -1,0 +1,32 @@
+{/* Tooltip.mdx */}
+
+import { Meta, Controls, Source, Primary } from '@storybook/blocks';
+
+import * as TooltipStories from './Tooltip.stories';
+import ThemeFile from '!!raw-loader!./theme';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+Tooltips are used to provide additional information to an element when hovering over it.
+
+```js
+import { Tooltip } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Tooltip has the following properties:
+
+<Controls />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

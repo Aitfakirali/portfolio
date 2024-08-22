@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  documentation:
+    build:
+      context: ../../
+      target: runner_docs
+      dockerfile: apps/documentation/Dockerfile
+      args:
+        CACHEBUST: 2
+    restart: unless-stopped
+    networks:
+      - internal
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.rma_sinistres_http_docs.rule=Host(`docs.1079.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_http_docs.entrypoints=http'
+      - 'traefik.http.routers.rma_sinistres_https_docs.rule=Host(`docs.1079.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_https_docs.entrypoints=https'
+      - 'traefik.http.routers.rma_sinistres_https_docs.tls=true'
+      - 'traefik.http.routers.rma_sinistres_https_docs.tls.certresolver=k8spreprodchallenge'
+
+networks:
+  internal:
+    external: true

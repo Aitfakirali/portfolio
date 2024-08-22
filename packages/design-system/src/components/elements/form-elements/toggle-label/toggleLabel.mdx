@@ -1,0 +1,41 @@
+{/* toggleLabel.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as ToggleLabelStories from './ToggleLabel.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={ToggleLabelStories} />
+
+# Toggle Label
+
+```js
+import { ToggleLabel } from '@portfolio/design-system';
+```
+
+<Primary />
+
+## API
+
+Toggle Label has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

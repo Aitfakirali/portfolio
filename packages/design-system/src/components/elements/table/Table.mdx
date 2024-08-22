@@ -1,0 +1,159 @@
+{/* Table.mdx */}
+
+import { Meta, Controls, Primary, Source } from '@storybook/blocks';
+
+import * as TableStories from './Table.stories';
+import ThemeFile from '!!raw-loader!./theme';
+
+<Meta of={TableStories} />
+
+# Table
+
+a component to display a Table
+
+```js
+import { Table } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Table has the following properties:
+
+<Controls />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>
+
+## Example usage
+
+this is the data that will be used in the examples below, it's an array of objects, each object represents a row in the table.
+in case we want to render a custom element in the cell, the value of the key should be an object with two keys, `element` and `value`, the `element` key is the element that will be rendered in the cell, and the `value` key is the value that will be used in the filters.
+
+```js
+const data: = [
+  {
+    name: 'fohn Doe',
+    declaration_number: '146876',
+    cin: 'AB5789',
+    declaration_date: '10/12/2020',
+    type: 'TVA',
+    status: {
+      element: <Text>Confirmé</Text>,
+      value: 'Confirmé',
+    },
+  },
+  {
+    name: 'fohn Doe',
+    declaration_number: '146876',
+    cin: 'TET9798',
+    declaration_date: '10/12/2020',
+    type: 'TVA',
+    status: {
+      element: <Text>Confirmé</Text>,
+      value: 'Confirmé',
+    },
+  },
+  {
+    name: 'hohn Doe',
+    declaration_number: '246876',
+    cin: 'AB5789',
+    declaration_date: '12/12/2020',
+    type: 'RMA',
+    status: {
+      element: <Text className='text-warning'>En attente</Text>,
+      value: 'En attente',
+    },
+  },
+  {
+    name: 'John Doe',
+    declaration_number: '346876',
+    cin: 'AB5789',
+    declaration_date: '10/11/2020',
+    type: 'RMA',
+    status: {
+      element: <Text className='text-success'>Completed</Text>,
+      value: 'Completed',
+    },
+  },
+];
+```
+
+this is how you can define the columns using the `createColumnHelper` function, and how you can pass the options for the faceted filter.
+in the data above, we have the `Status` column that has a custom element, we should use the `cell` key to render the custom element, and the `value` key to use it in the filters.
+
+if you wanna use a column as a faceted filter, you should pass the `facetedFilterBy` prop to the table, pass the column id to it. and you should pass the options for the faceted filter to the `options` prop. and you should pass the `filterFn` to the column, the `filterFn` will be called with three arguments, the row, the column id, and the filter value, and it should return a boolean value.
+
+```js
+import { createColumnHelper } from '@tanstack/react-table';
+import { Table } from './Table';
+
+const columnHelper = createColumnHelper();
+
+const columns = [
+  columnHelper.accessor('name', {
+    header: 'Full Name',
+    id: 'Full Name',
+  }),
+  columnHelper.accessor('declaration_number', {
+    header: 'Declaration Number',
+    id: 'Declaration Number',
+  }),
+  columnHelper.accessor('cin', {
+    header: 'CIN',
+    id: 'CIN',
+  }),
+  columnHelper.accessor('declaration_date', {
+    header: 'Declaration Date',
+    id: 'Declaration Date',
+    sortingFn: 'datetime',
+  }),
+  columnHelper.accessor('type', {
+    header: 'Type',
+    id: 'Type',
+    enableSorting: false,
+    filterFn: (row, id, filterValue) => filterValue.includes(row.getValue(id)),
+  }),
+  columnHelper.accessor((row) => row.status.value, {
+    header: 'Status',
+    id: 'Status',
+    filterFn: (row, id, filterValue) => filterValue.includes(row.getValue(id)),
+    cell: ({ row }) => row.original.status.element,
+  }),
+];
+
+const options = {
+  Status: [
+    {
+      element: <Text className='text-success'>Completed</Text>,
+      value: 'Completed',
+    },
+    {
+      element: <Text className='text-warning'>En attente</Text>,
+      value: 'En attente',
+    },
+    {
+      element: <Text>Confirmé</Text>,
+      value: 'Confirmé',
+    },
+  ],
+  Type: [
+    {
+      label: 'TVA',
+      value: 'TVA',
+    },
+    {
+      label: 'RMA',
+      value: 'RMA',
+    },
+  ],
+};
+
+export Example = () => <Table data={data} columns={columns} facetedFilterBy: 'Status,Type' options={options} />;
+```

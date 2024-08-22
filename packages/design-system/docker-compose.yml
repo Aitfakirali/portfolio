@@ -1,0 +1,63 @@
+version: '3.4'
+
+services:
+  ui:
+    build:
+      context: ../../
+      target: runner_ui
+      dockerfile: packages/design-system/Dockerfile
+      args:
+        CACHEBUST: 2
+    restart: unless-stopped
+    networks:
+      - internal
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.rma_sinistres_http_design_system.rule=Host(`design-system.rma.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_http_design_system.entrypoints=http'
+      - 'traefik.http.routers.rma_sinistres_https_design_system.rule=Host(`design-system.rma.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_https_design_system.entrypoints=https'
+      - 'traefik.http.routers.rma_sinistres_https_design_system.tls=true'
+      - 'traefik.http.routers.rma_sinistres_https_design_system.tls.certresolver=k8spreprodchallenge'
+
+  coverage:
+    build:
+      context: ../../
+      target: runner_coverage
+      dockerfile: packages/design-system/Dockerfile
+    restart: unless-stopped
+    networks:
+      - internal
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.rma_sinistres_http_design_system_coverage.rule=Host(`coverage.rma.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_http_design_system_coverage.entrypoints=http'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_coverage.rule=Host(`coverage.rma.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_coverage.entrypoints=https'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_coverage.tls=true'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_coverage.tls.certresolver=k8spreprodchallenge'
+
+  eslint_report:
+    build:
+      context: ../../
+      target: runner_eslint_reports
+      dockerfile: packages/design-system/Dockerfile
+    restart: unless-stopped
+    networks:
+      - internal
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.rma_sinistres_http_design_system_eslint.rule=Host(`lint.rma.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_http_design_system_eslint.entrypoints=http'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_eslint.rule=Host(`lint.rma.lecontenaire.com`)'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_eslint.entrypoints=https'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_eslint.tls=true'
+      - 'traefik.http.routers.rma_sinistres_https_design_system_eslint.tls.certresolver=k8spreprodchallenge'
+
+networks:
+  internal:
+    external: true
+
+volumes:
+  cache:
+    driver: local

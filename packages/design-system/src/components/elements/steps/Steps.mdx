@@ -1,0 +1,32 @@
+{/* Steps.mdx */}
+
+import { Meta, Controls, Source, Primary } from '@storybook/blocks';
+
+import * as StepsStories from './Steps.stories';
+import ThemeFile from '!!raw-loader!./theme';
+
+<Meta of={StepsStories} />
+
+# Stepper
+
+a component to display a series of steps
+
+```js
+import { Steps } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Stepper has the following properties:
+
+<Controls />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

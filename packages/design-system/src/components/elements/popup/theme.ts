@@ -1,0 +1,38 @@
+export const theme = {
+  base: 'fixed',
+  overlay: 'fixed inset-0 bg-black/40 transition-opacity',
+  rounded: 'rounded-lg',
+  panel: 'mx-auto w-auto max-w-full h-auto overflow-hidden bg-white',
+  variants: {
+    modal: {
+      enter: 'transition duration-100 ease-out',
+      enterFrom: 'transform scale-95 opacity-0',
+      enterTo: 'transform scale-100 opacity-100',
+      leave: 'transition duration-75 ease-out',
+      leaveFrom: 'transform scale-100 opacity-100',
+      leaveTo: 'transform scale-95 opacity-0',
+      base: 'inset-0 flex items-center justify-center p-4',
+      panel: 'rounded-lg',
+    },
+    slideLeft: {
+      enter: 'transform transition ease-in-out duration-300 sm:duration-500',
+      enterFrom: 'transform translate-x-full',
+      enterTo: '',
+      leave: 'transform transition ease-in-out duration-300 sm:duration-500',
+      leaveFrom: '',
+      leaveTo: 'transform translate-x-full',
+      base: 'top-0 right-0 bottom-0',
+      panel: '',
+    },
+    slideRight: {
+      enter: 'transform transition ease-in-out duration-300 sm:duration-500',
+      enterFrom: '-translate-x-full',
+      enterTo: 'translate-x-0',
+      leave: 'transform transition ease-in-out duration-300 sm:duration-500',
+      leaveFrom: 'translate-x-0',
+      leaveTo: '-translate-x-full',
+      base: 'top-0 left-0',
+      panel: '',
+    },
+  },
+};

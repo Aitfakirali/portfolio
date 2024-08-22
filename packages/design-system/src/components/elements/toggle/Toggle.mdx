@@ -1,0 +1,32 @@
+{/* Toggle.mdx */}
+
+import { Meta, Controls, Source, Primary } from '@storybook/blocks';
+
+import * as ToggleStories from './Toggle.stories';
+import ThemeFile from '!!raw-loader!./theme';
+
+<Meta of={ToggleStories} />
+
+# Toggle
+
+a toggle switch
+
+```js
+import { Toggle } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Toggle has the following properties:
+
+<Controls />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

@@ -1,0 +1,39 @@
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as ShockPointsStories from './ShockPoints.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={ShockPointsStories} />
+
+# Shock Points
+
+```js
+import { ShockPoints } from '@portfolio/design-system';
+```
+
+<Primary />
+
+## API
+
+Shock Points has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

@@ -1,0 +1,43 @@
+{/* AccordionV2.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as AccordionV2Stories from './AccordionV2.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={AccordionV2Stories} />
+
+# AccordionV2
+
+Primary UI component for user interaction
+
+```js
+import { AccordionV2 } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Button has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

@@ -1,0 +1,158 @@
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
+
+export const TailwindThemeConfig = {
+  darkMode: 'class',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      height: {
+        'exclude-header': 'calc(100vh - 72px)',
+      },
+      spacing: {
+        18: '72px',
+      },
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+      },
+      fontSize: {
+        sm: ['12px', '16px'],
+        base: ['14px', '20px'],
+        md: ['16px', '24px'],
+        lg: ['20px', '30px'],
+        xl: ['24px', '32px'],
+        '2xl': ['36px', '44px'],
+      },
+      fontFamily: {
+        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        primary: {
+          DEFAULT: '#FF5C00',
+          25: '#fff0e8',
+          50: '#ffd3b9',
+          100: '#ffb58b',
+          200: '#ff975d',
+          300: '#ff7a2e',
+          400: '#ff5c00',
+          500: '#d14b00',
+          600: '#a23b00',
+          700: '#742a00',
+          800: '#461900',
+          900: '#170800',
+        },
+        // gray: {
+        //     DEFAULT: '#667085',
+        //     25: '#FCFCFD',
+        //     50: '#F9FAFB',
+        //     100: '#F2F4F7',
+        //     200: '#D1D8E2',
+        //     300: '#BDC4CF',
+        //     400: '#98A2B3',
+        //     500: '#667085',
+        //     600: '#475467',
+        //     700: '#344054',
+        //     800: '#1D2939',
+        //     900: '#101828',
+        // },
+        gold: {
+          DEFAULT: '#DCA942',
+          400: '#DCA942',
+          500: '#AF8020',
+          600: '#7D580E',
+        },
+        error: {
+          DEFAULT: '#F04438',
+          25: '#FFFBFA',
+          50: '#FEF3F2',
+          100: '#FEF3F2',
+          200: '#FECDCA',
+          300: '#FDA29B',
+          400: '#F97066',
+          500: '#F04438',
+          600: '#D92D20',
+          700: '#B42318',
+          800: '#912018',
+          900: '#7A271A',
+        },
+        warning: {
+          DEFAULT: '#F79009',
+          25: '#FFFCF5',
+          50: '#FFFAEB',
+          100: '#FEF0C7',
+          200: '#FEDF89',
+          300: '#FEC84B',
+          400: '#FDB022',
+          500: '#F79009',
+          600: '#DC6803',
+          700: '#B54708',
+          800: '#93370D',
+          900: '#7A2E0E',
+        },
+        success: {
+          DEFAULT: '#12B76A',
+          25: '#F6FEF9',
+          50: '#ECFDF3',
+          100: '#D1FADF',
+          200: '#A6F4C5',
+          300: '#6CE9A6',
+          400: '#32D583',
+          500: '#12B76A',
+          600: '#039855',
+          700: '#027A48',
+          800: '#05603A',
+          900: '#054F31',
+        },
+        'blue-gray': {
+          DEFAULT: '#F8F9FC',
+          50: '#F8F9FC',
+          700: '#363F72',
+        },
+        'blue-light': {
+          DEFAULT: '#F0F9FF',
+          50: '#F0F9FF',
+          700: '#026AA2',
+        },
+        indigo: {
+          DEFAULT: '#EEF4FF',
+          50: '#EEF4FF',
+          700: '#3538CD',
+        },
+        purple: {
+          DEFAULT: '#F4F3FF',
+          50: '#F4F3FF',
+          700: '#5925DC',
+        },
+        pink: {
+          DEFAULT: '#FDF2FA',
+          50: '#FDF2FA',
+          500: '#EE46BC',
+        },
+      },
+      backgroundImage: {
+        kpi: 'linear-gradient(180deg, #2B5BB5 0%, #3F73D3 100%)',
+        banner: 'linear-gradient(180deg, #234585 0%, #3057A1 100%)',
+        procedure:
+          'linear-gradient(180deg, #FFF 0%, #FFE6C0 100%, #FFE6C0 100%)',
+        'procedure-mobile':
+          'linear-gradient(90deg, #FFF 0%, #FFE6C0 100%, #FFE6C0 100%)',
+        reclamation: 'linear-gradient(180deg, #2B5BB5 0%, #3F73D3 100%)',
+      },
+      boxShadow: {
+        DEFAULT:
+          '0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1)',
+        base: '0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1)',
+        md: '0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)',
+        lg: '0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05)',
+        xl: '0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04)',
+        espaceClientFooter: '0px 4px 16px 0px rgba(168, 177, 234, 0.40)',
+        scrollIndice: 'inset -7px 0px 8px -6px rgb(30 101 235 / 50%)',
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries'),
+    require('tailwind-scrollbar-hide'),
+  ],
+} satisfies Config;

@@ -1,0 +1,41 @@
+{/* Notification.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as NotificationStories from './Notification.stories';
+import ThemeFile from '!!raw-loader!./theme';
+
+<Meta of={NotificationStories} />
+
+# Notification
+
+a notification component
+
+```js
+import { Notification } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Notification has the following properties:
+
+<Controls />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

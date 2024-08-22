@@ -1,0 +1,42 @@
+{/* Button.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+import ThemeFile from '!!raw-loader!./theme.ts';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+Primary UI component for user interaction
+
+```js
+import { Badge } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Button has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

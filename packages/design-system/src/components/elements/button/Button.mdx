@@ -1,0 +1,43 @@
+{/* Button.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+Primary UI component for user interaction
+
+```js
+import { Button } from '@portfolio/design-system';
+```
+
+<Primary />
+
+## API
+
+Button has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

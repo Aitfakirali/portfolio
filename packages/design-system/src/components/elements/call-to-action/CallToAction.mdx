@@ -1,0 +1,43 @@
+{/* CallToAction.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as CallToAction from './CallToAction.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={CallToAction} />
+
+# CallToAction
+
+Primary UI component for user interaction
+
+```js
+import { CallToAction } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+CallToAction has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

@@ -1,0 +1,32 @@
+{/* TabsMenu.mdx */}
+
+import { Meta, Controls, Source, Primary } from '@storybook/blocks';
+
+import * as TabsMenuStories from './TabsMenu.stories';
+import ThemeFile from '!!raw-loader!./theme';
+
+<Meta of={TabsMenuStories} />
+
+# Tabs
+
+a component to display a list of tabs
+
+```js
+import { TabsMenu } from '@storybook/design-system';
+```
+
+<Primary />
+
+## API
+
+Tabs Menu has the following properties:
+
+<Controls />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>

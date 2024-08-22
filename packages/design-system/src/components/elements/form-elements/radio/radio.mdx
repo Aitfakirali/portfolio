@@ -1,0 +1,41 @@
+{/* radio.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Description,
+  Source,
+  ArgTypes,
+  Stories,
+  Primary,
+} from '@storybook/blocks';
+
+import * as RadioStories from './Radio.stories';
+import ThemeFile from '!!raw-loader!./theme.ts';
+
+<Meta of={RadioStories} />
+
+# Radio
+
+```js
+import { Radio } from '@portfolio/design-system';
+```
+
+<Primary />
+
+## API
+
+Radio has the following properties:
+
+<Controls />
+
+<Stories includePrimary={false} />
+
+<hr />
+
+<details>
+<summary>Theme source</summary>
+
+<Source dark language='jsx' code={ThemeFile} />
+</details>
