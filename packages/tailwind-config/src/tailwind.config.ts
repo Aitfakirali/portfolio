@@ -24,7 +24,8 @@ export const TailwindThemeConfig = {
         '2xl': ['36px', '44px'],
       },
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        text: ['var(--dm_sans)', 'Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['var(--dm_serif)', 'Inter', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         primary: {

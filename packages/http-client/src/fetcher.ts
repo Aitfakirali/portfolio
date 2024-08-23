@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { logger } from '@portfolio/next-logger';
+// import { logger } from '@portfolio/next-logger';
 import { signOut } from 'next-auth/react';
 export class ResponseError extends Error {
   constructor(
@@ -53,24 +53,24 @@ export async function fetcher<TData>(
   }
 
   try {
-    const fetchStartTime = performance.now();
+    // const fetchStartTime = performance.now();
     const response = await fetch(path, {
       headers,
       ...config,
       method,
       ...(body && { body: JSON.stringify(body) }),
     });
-    const fetchEndTime = performance.now();
+    // const fetchEndTime = performance.now();
 
-    logger.info({
-      type: 'fetch',
-      endpoint: path,
-      headers,
-      method,
-      body: JSON.stringify(body),
-      duration: fetchEndTime - fetchStartTime,
-      status: response.ok,
-    });
+    // logger.info({
+    //   type: 'fetch',
+    //   endpoint: path,
+    //   headers,
+    //   method,
+    //   body: JSON.stringify(body),
+    //   duration: fetchEndTime - fetchStartTime,
+    //   status: response.ok,
+    // });
 
     if (
       !response.ok &&

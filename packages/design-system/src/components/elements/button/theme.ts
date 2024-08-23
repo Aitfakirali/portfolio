@@ -1,5 +1,5 @@
 export const button = {
-  base: 'relative w-fit box-border flex items-center justify-center focus:outline-none transition ease-in-out duration-300 gap-[10px] rounded',
+  base: 'relative w-fit box-border flex items-center justify-center focus:outline-none transition ease-in-out duration-300 gap-[10px]',
   contentWrapper: 'flex items-center justify-center gap-x-2',
   disabled: {
     base: 'cursor-not-allowed ',
@@ -29,5 +29,6 @@ export const button = {
       'border border-primary text-primary hover:border-primary-400 hover:text-primary-400 focus:border-primary-600 focus:text-primary-600',
     text: 'text-primary hover:bg-gray-50 focus:bg-transparent',
     green: 'bg-green text-white hover:bg-green-400 focus:bg-green-600',
+    dark: 'bg-black text-white px-8 py-3 hover:bg-black/80',
   },
 };

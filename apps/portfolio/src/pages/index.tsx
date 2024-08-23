@@ -1,3 +1,4 @@
+import { Technologies, Hero, Work, Contact } from '@/widgets';
 import { Seo } from '@portfolio/core';
 import * as React from 'react';
 
@@ -5,6 +6,12 @@ export default function Page() {
   return (
     <>
       <Seo templateTitle='Starter' />
+      <div className='min-h-screen flex flex-col'>
+        <Hero />
+        <Technologies />
+      </div>
+      <Work />
+      <Contact />
     </>
   );
 }
