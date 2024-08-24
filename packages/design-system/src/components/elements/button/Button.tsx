@@ -89,7 +89,7 @@ export interface ButtonProps {
   /**
    * Same as target attribute of a, works when href is specified
    */
-  target?: string | null;
+  target?: string | undefined;
   /**
    *
    */
@@ -118,7 +118,7 @@ const Button = forwardRef(
       onClick,
       href,
       isLoading,
-      target = null,
+      target = undefined,
       theme = baseTheme,
       ...rest
     }: ButtonProps | ButtonPropsOverrides,
