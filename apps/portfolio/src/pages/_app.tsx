@@ -5,6 +5,7 @@ import { ReactElement, ReactNode, useState } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { DM_Serif_Display, DM_Sans, DM_Mono } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '@/styles/globals.css';
 import 'keen-slider/keen-slider.min.css';
@@ -63,6 +64,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <SpeedInsights />
       <Hydrate state={pageProps.dehydratedState}>{componentWithLayout}</Hydrate>
       <ReactQueryDevtools position='bottom-right' />
     </QueryClientProvider>

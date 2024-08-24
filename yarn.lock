@@ -5200,6 +5200,11 @@
   dependencies:
     "@use-gesture/core" "10.3.0"
 
+"@vercel/speed-insights@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.0.12.tgz#71c2edffdedae98d34e306d7b0a573e6816898b4"
+  integrity sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==
+
 "@visx/annotation@3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@visx/annotation/-/annotation-3.3.0.tgz#2297ed3ea30ec334ced586cff014a69ec7e843b9"
