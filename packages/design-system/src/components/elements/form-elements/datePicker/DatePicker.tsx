@@ -1,5 +1,7 @@
 import { Menu, Transition } from '@headlessui/react';
-import { format, isValid, parse } from 'date-fns';
+import format from 'date-fns/format';
+import isValid from 'date-fns/isValid';
+import parse from 'date-fns/parse';
 import fr from 'date-fns/locale/fr';
 import React, { ChangeEventHandler } from 'react';
 import { DayPicker } from 'react-day-picker';

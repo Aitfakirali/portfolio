@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import format from 'date-fns/format';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from 'react';
 
