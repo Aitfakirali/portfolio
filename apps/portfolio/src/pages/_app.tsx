@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       <Layout
         className={vclsx(
           `${dmSans.variable} ${dmSerif.variable} ${dmMono.variable}`,
-          dmSans.className,
+          dmMono.className,
         )}
       >
         {page}

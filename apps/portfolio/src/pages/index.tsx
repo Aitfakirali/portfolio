@@ -1,4 +1,4 @@
-import { Technologies, Hero, Work, Contact } from '@/widgets';
+import { Technologies, Hero, MyJourney } from '@/widgets';
 import { Seo } from '@portfolio/core';
 import * as React from 'react';
 
@@ -6,13 +6,10 @@ export default function Page() {
   return (
     <>
       <Seo templateTitle='Starter' />
-      <main className='space-y-20'>
-        <div className='min-h-screen flex flex-col'>
-          <Hero />
-          <Technologies />
-        </div>
-        <Work />
-        <Contact />
+      <main className=''>
+        <Hero />
+        <Technologies />
+        <MyJourney />
       </main>
     </>
   );

@@ -25,7 +25,7 @@ export const Technologies = () => {
   return (
     <Marquee direction='right' autoFill>
       {technologies.map((tech, index) => (
-        <div className='p-3' key={index}>
+        <div className='p-3 bg-black' key={index}>
           <Image
             src={`${prefix}${tech}`}
             alt='tech images'

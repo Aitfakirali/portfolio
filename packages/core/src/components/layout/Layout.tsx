@@ -13,7 +13,9 @@ export const Layout = ({
 }) => {
   return (
     <div className={vclsx('relative', className)}>
-      <div className={vclsx('min-h-screen bg-gray-50')}>{children}</div>
+      <div className={vclsx('min-h-screen bg-black text-white')}>
+        {children}
+      </div>
     </div>
   );
 };
