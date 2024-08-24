@@ -4,15 +4,21 @@ import { AppProps } from 'next/app';
 import { ReactElement, ReactNode, useState } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { DM_Serif_Display, DM_Sans } from 'next/font/google';
+import { DM_Serif_Display, DM_Sans, DM_Mono } from 'next/font/google';
 
 import '@/styles/globals.css';
 import 'keen-slider/keen-slider.min.css';
 import 'react-day-picker/dist/style.css';
+import { vclsx } from '@portfolio/ui';
 
 const dmSerif = DM_Serif_Display({
   weight: ['400'],
   variable: '--dm_serif',
+  subsets: ['latin'],
+});
+const dmMono = DM_Mono({
+  weight: ['400', '500', '300'],
+  variable: '--dm_mono',
   subsets: ['latin'],
 });
 const dmSans = DM_Sans({
@@ -44,7 +50,12 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout =
     Component.getLayout ??
     ((page: ReactElement) => (
-      <Layout className={`${dmSans.variable} ${dmSerif.variable}`}>
+      <Layout
+        className={vclsx(
+          `${dmSans.variable} ${dmSerif.variable} ${dmMono.variable}`,
+          dmSans.className,
+        )}
+      >
         {page}
       </Layout>
     ));

@@ -35,4 +35,10 @@ export const typography = {
   'text-2xl/Medium': 'text-2xl font-medium',
   'text-2xl/Semibold': 'text-2xl font-semibold',
   'text-2xl/Bold': 'text-2xl font-bold',
+
+  'text-4xl/Light': 'text-4xl font-light',
+  'text-4xl/Regular': 'text-4xl font-normal',
+  'text-4xl/Medium': 'text-4xl font-medium',
+  'text-4xl/Semibold': 'text-4xl font-semibold',
+  'text-4xl/Bold': 'text-4xl font-bold',
 };

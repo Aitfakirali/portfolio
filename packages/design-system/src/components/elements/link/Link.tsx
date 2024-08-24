@@ -32,6 +32,8 @@ interface LinkProps {
    * the title of the link
    */
   title?: string;
+
+  target?: string;
 }
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
@@ -43,6 +45,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       variant = 'default',
       onClick,
       title = '',
+      target,
       ...rest
     },
     ref,
@@ -64,6 +67,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         className={clsx(className, link[variant])}
         title={title}
         onClick={handleClick}
+        target={target}
         {...rest}
       >
         {children}

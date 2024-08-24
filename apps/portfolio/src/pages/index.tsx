@@ -6,12 +6,14 @@ export default function Page() {
   return (
     <>
       <Seo templateTitle='Starter' />
-      <div className='min-h-screen flex flex-col'>
-        <Hero />
-        <Technologies />
-      </div>
-      <Work />
-      <Contact />
+      <main className='space-y-20'>
+        <div className='min-h-screen flex flex-col'>
+          <Hero />
+          <Technologies />
+        </div>
+        <Work />
+        <Contact />
+      </main>
     </>
   );
 }
