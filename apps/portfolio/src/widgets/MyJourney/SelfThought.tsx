@@ -143,9 +143,9 @@ const WaveArrow = () => {
           y2='174.567'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FEBD81' />
-          <stop offset='0.489583' stop-color='#FFE598' />
-          <stop offset='1' stop-color='#BFF4A6' />
+          <stop stopColor='#FEBD81' />
+          <stop offset='0.489583' stopColor='#FFE598' />
+          <stop offset='1' stopColor='#BFF4A6' />
         </linearGradient>
       </defs>
     </svg>

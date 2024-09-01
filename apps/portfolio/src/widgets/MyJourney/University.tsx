@@ -81,8 +81,8 @@ const CurvedArrow = () => {
           y2='172.777'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#A9FE81' />
-          <stop offset='1' stop-color='#C0F0FF' />
+          <stop stopColor='#A9FE81' />
+          <stop offset='1' stopColor='#C0F0FF' />
         </linearGradient>
       </defs>
     </svg>

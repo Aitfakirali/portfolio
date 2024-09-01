@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
-  title: 'RMA - GAMA',
-  siteName: 'RMA - GAMA',
-  description: 'RMA - GAMA',
+  title: 'Porfolio',
+  siteName: 'Porfolio',
+  description: 'Porfolio',
   url: 'https://soufianetech.com',
   type: 'website',
   robots: 'noindex',
@@ -37,9 +37,9 @@ export const Seo = (props: SeoProps) => {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name='msapplication-TileColor' content='#ffffff' />
+      <meta name='msapplication-TileColor' content='#000000' />
       <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
-      <meta name='theme-color' content='#ffffff' />
+      <meta name='theme-color' content='#000000' />
     </Head>
   );
 };

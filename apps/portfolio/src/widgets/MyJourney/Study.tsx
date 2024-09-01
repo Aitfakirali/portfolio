@@ -85,8 +85,8 @@ const SolidArrow = () => {
           y2='172.449'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#BFF0FF' />
-          <stop offset='1' stop-color='#82B4FF' />
+          <stop stopColor='#BFF0FF' />
+          <stop offset='1' stopColor='#82B4FF' />
         </linearGradient>
       </defs>
     </svg>
@@ -116,8 +116,8 @@ const DashedArrow = () => {
           y2='45.6956'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#BFF0FF' />
-          <stop offset='1' stop-color='#82B4FF' />
+          <stop stopColor='#BFF0FF' />
+          <stop offset='1' stopColor='#82B4FF' />
         </linearGradient>
       </defs>
     </svg>

@@ -5,7 +5,7 @@ import * as React from 'react';
 export default function Page() {
   return (
     <>
-      <Seo templateTitle='Starter' />
+      <Seo templateTitle='Home page' />
       <main className=''>
         <Hero />
         <Technologies />
