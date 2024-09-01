@@ -5,7 +5,7 @@ const defaultMeta = {
   title: 'RMA - GAMA',
   siteName: 'RMA - GAMA',
   description: 'RMA - GAMA',
-  url: 'rma-sinistres.lecontenaire.com',
+  url: 'soufianetech.com',
   type: 'website',
   robots: 'noindex',
 };
