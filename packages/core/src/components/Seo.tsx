@@ -5,7 +5,7 @@ const defaultMeta = {
   title: 'RMA - GAMA',
   siteName: 'RMA - GAMA',
   description: 'RMA - GAMA',
-  url: 'soufianetech.com',
+  url: 'https://soufianetech.com',
   type: 'website',
   robots: 'noindex',
 };
