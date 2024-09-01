@@ -60,7 +60,7 @@ export const Hero = () => {
       />
       <Text
         variant='text-huge-headline/Bold'
-        className='text-huge-headline text-center bg-gradient-to-r text-transparent bg-clip-text from-[#DBA6F4] to-[#A981FE]'
+        className='text-title lg:text-huge-headline text-center bg-gradient-to-r text-transparent bg-clip-text from-[#DBA6F4] to-[#A981FE]'
       >
         <span>
           Hi. I'am Soufiane. <br />

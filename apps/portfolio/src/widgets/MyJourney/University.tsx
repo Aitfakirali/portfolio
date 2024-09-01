@@ -3,10 +3,10 @@ import { Image, Text } from '@portfolio/ui';
 
 export const University = () => {
   return (
-    <Container className='max-w-6xl'>
+    <Container className='max-w-6xl space-y-20'>
       <div className='flex flex-col gap-5 md:flex-row items-center w-full '>
         <Text
-          className='md:max-w-md text-transparent bg-gradient-to-r from-[#C0F0FF] to-[#A9FE81] bg-clip-text'
+          className='text-transparent bg-gradient-to-r from-[#C0F0FF] to-[#A9FE81] bg-clip-text'
           variant='text-quote/Medium'
         >
           I arrived at the university to complete my bechelor degree at
@@ -16,7 +16,7 @@ export const University = () => {
       </div>
 
       <div className='flex flex-col md:flex-row gap-10 py-10 justify-between'>
-        <div className='space-y-6 flex-1'>
+        <div className='space-y-6 flex-1 md:max-w-md'>
           <div className='space-y-2'>
             <Text
               variant='text-2xl/Semibold'
@@ -28,7 +28,7 @@ export const University = () => {
               2019 - 2021
             </Text>
           </div>
-          <Text className='max-w-sm' variant='text-md/Regular'>
+          <Text variant='text-md/Regular'>
             After completing my studies at the School of Technologies, I decided
             to pursue a bachelor's degree at the university. I enrolled in the
             Faculty of Science at Ben M'sick, and after two years, I earned mys

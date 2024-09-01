@@ -9,7 +9,7 @@ export const SelfThought = () => {
         <WaveArrow />
         <div className='md:absolute py-10 md:top-1/2 md:-translate-y-1/2 right-10'>
           <Text
-            className='md:max-w-md font-primary text-transparent bg-gradient-to-r from-[#C0F0FF] to-[#A9FE81] bg-clip-text'
+            className='md:max-w-md font-primary text-transparent bg-gradient-to-r to-[#FEBD81] from-[#BFF4A6] bg-clip-text'
             variant='text-quote/Medium'
           >
             After earning my bachelor's degree, I began learning React.js and
@@ -18,28 +18,37 @@ export const SelfThought = () => {
           </Text>
         </div>
       </div>
-      <div className='flex flex-col items-center md:flex-row gap-10 py-10 justify-between'>
-        <div className='space-y-6 flex-1'>
+      <div className='flex flex-col md:items-center md:flex-row gap-10 py-10 justify-between'>
+        <div className='space-y-6 flex-1 md:max-w-md'>
           <div className='space-y-2'>
             <Text
               variant='text-2xl/Semibold'
-              className='bg-clip-text text-transparent bg-gradient-to-r from-[#C0F0FF] to-[#A9FE81]'
+              className='bg-clip-text text-transparent bg-gradient-to-r to-[#FEBD81] from-[#BFF4A6]'
             >
               VOID
             </Text>
-            <Text className='bg-clip-text text-transparent bg-gradient-to-r from-[#C0F0FF] to-[#A9FE81]'>
+            <Text className='bg-clip-text text-transparent bg-gradient-to-r to-[#FEBD81] from-[#BFF4A6]'>
               2021 - Now
             </Text>
           </div>
-          <Text className='max-w-sm' variant='text-md/Regular'>
-            After completing my studies at the School of Technologies, I decided
-            to pursue a bachelor's degree at the university. I enrolled in the
-            Faculty of Science at Ben M'sick, and after two years, I earned mys
-            diploma.
+          <Text className='text-justify' variant='text-md/Regular'>
+            I started a new job at VOID two and a half years ago as a junior
+            frontend developer. In this role, I focused on building modern
+            applications using cutting-edge technologies like React.js and
+            Next.js. During my time there, I also gained experience with Docker
+            and Git, and I learned how to deploy projects on servers. This
+            position has allowed me to expand my skill set and grow as a
+            developer, working on a variety of challenging projects.
           </Text>
-          <div className='flex gap-5 pe-10'>
-            <div className='bg-gray-800/50 p-5'>
-              Discovered new cours at mathematics and physics
+          <div className='flex gap-5 flex-wrap'>
+            <div className='flex-1 w-full basis-full bg-gray-800/50 p-5'>
+              Create stunning designs
+            </div>
+            <div className='flex-1 basis-full bg-gray-800/50 p-5'>
+              Build & deploy applications using github workflows
+            </div>
+            <div className='flex-1 basis-full bg-gray-800/50 p-5'>
+              Build images with Docker
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const Study = () => {
       <SolidArrow />
       <DashedArrow />
 
-      <Text className='max-w-sm relative pb-20 md:absolute right-0 top-20'>
+      <Text className='md:max-w-sm relative pb-40 md:absolute right-0 top-20'>
         I started studying software engineering out of curiosity, but quickly
         discovered a passion for creating innovative solutions. The more I
         learned, the more I fell in love with the challenges and creativity it
@@ -17,7 +17,7 @@ export const Study = () => {
 
       <div className='flex flex-col md:flex-row py-10 gap-20 px-5'>
         <div className='flex-1 flex items-center justify-center'>
-          <div className='bg-white p-4 -rotate-12 space-y-4'>
+          <div className='bg-white py-4 -rotate-12 space-y-4'>
             <Image
               src='/ensa.jpg'
               alt=''
@@ -30,7 +30,7 @@ export const Study = () => {
             </Text>
           </div>
         </div>
-        <div className='flex-1 space-y-6'>
+        <div className='flex-1 space-y-6 md:max-w-md'>
           <div className='space-y-2'>
             <Text
               variant='text-2xl/Semibold'
@@ -42,7 +42,7 @@ export const Study = () => {
               2017 - 2019
             </Text>
           </div>
-          <Text className='max-w-sm' variant='text-md/Regular'>
+          <Text variant='text-md/Regular'>
             I started studying at ENSA Berrechid In my first semester, I learnt
             how to print hello world using C,
             <br />

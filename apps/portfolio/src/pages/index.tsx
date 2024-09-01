@@ -1,4 +1,4 @@
-import { Technologies, Hero, MyJourney } from '@/widgets';
+import { Technologies, Hero, MyJourney, Contact } from '@/widgets';
 import { Seo } from '@portfolio/core';
 import * as React from 'react';
 
@@ -10,6 +10,7 @@ export default function Page() {
         <Hero />
         <Technologies />
         <MyJourney />
+        <Contact />
       </main>
     </>
   );
