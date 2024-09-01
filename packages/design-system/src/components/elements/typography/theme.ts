@@ -41,4 +41,40 @@ export const typography = {
   'text-4xl/Medium': 'text-4xl font-medium',
   'text-4xl/Semibold': 'text-4xl font-semibold',
   'text-4xl/Bold': 'text-4xl font-bold',
+
+  'text-title/Light': 'text-title font-sans font-light',
+  'text-title/Regular': 'text-title font-sans font-normal',
+  'text-title/Medium': 'text-title font-sans font-medium',
+  'text-title/Semibold': 'text-title font-sans font-semibold',
+  'text-title/Bold': 'text-title font-sans font-bold',
+
+  'text-huge-headline/Light': 'text-huge-headline font-sans font-light',
+  'text-huge-headline/Regular': 'text-huge-headline font-sans font-normal',
+  'text-huge-headline/Medium': 'text-huge-headline font-sans font-medium',
+  'text-huge-headline/Semibold': 'text-huge-headline font-sans font-semibold',
+  'text-huge-headline/Bold': 'text-huge-headline font-sans font-bold',
+
+  'text-big-title/Light': 'text-big-title font-sans font-light',
+  'text-big-title/Regular': 'text-big-title font-sans font-normal',
+  'text-big-title/Medium': 'text-big-title font-sans font-medium',
+  'text-big-title/Semibold': 'text-big-title font-sans font-semibold',
+  'text-big-title/Bold': 'text-big-title font-sans font-bold',
+
+  'text-body/Light': 'text-body font-mono font-light',
+  'text-body/Regular': 'text-body font-mono font-normal',
+  'text-body/Medium': 'text-body font-mono font-medium',
+  'text-body/Semibold': 'text-body font-mono font-semibold',
+  'text-body/Bold': 'text-body font-mono font-bold',
+
+  'text-quote/Light': 'text-quote font-quote font-light',
+  'text-quote/Regular': 'text-quote font-quote font-normal',
+  'text-quote/Medium': 'text-quote font-quote font-medium',
+  'text-quote/Semibold': 'text-quote font-quote font-semibold',
+  'text-quote/Bold': 'text-quote font-quote font-bold',
+
+  'text-caption/Light': 'text-caption font-mono font-light',
+  'text-caption/Regular': 'text-caption font-mono font-normal',
+  'text-caption/Medium': 'text-caption font-mono font-medium',
+  'text-caption/Semibold': 'text-caption font-mono font-semibold',
+  'text-caption/Bold': 'text-caption font-mono font-bold',
 };

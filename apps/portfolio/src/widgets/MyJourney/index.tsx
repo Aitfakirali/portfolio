@@ -2,6 +2,7 @@ import { Image, Text } from '@portfolio/ui';
 import React from 'react';
 import { Study } from './Study';
 import { University } from './University';
+import { SelfThought } from './SelfThought';
 
 export const MyJourney = () => {
   return (
@@ -18,6 +19,7 @@ export const MyJourney = () => {
       </div>
       <Study />
       <University />
+      <SelfThought />
     </div>
   );
 };

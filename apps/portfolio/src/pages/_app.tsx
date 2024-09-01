@@ -4,7 +4,12 @@ import { AppProps } from 'next/app';
 import { ReactElement, ReactNode, useState } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { DM_Serif_Display, DM_Sans, DM_Mono } from 'next/font/google';
+import {
+  DM_Serif_Display,
+  DM_Sans,
+  DM_Mono,
+  Nanum_Pen_Script,
+} from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '@/styles/globals.css';
@@ -24,8 +29,14 @@ const dmMono = DM_Mono({
 });
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--dm_sans',
+});
+
+const nanumPan = Nanum_Pen_Script({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--manum_pan',
 });
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
@@ -53,7 +64,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     ((page: ReactElement) => (
       <Layout
         className={vclsx(
-          `${dmSans.variable} ${dmSerif.variable} ${dmMono.variable}`,
+          `${dmSans.variable} ${dmSerif.variable} ${dmMono.variable} ${nanumPan.variable}`,
           dmMono.className,
         )}
       >

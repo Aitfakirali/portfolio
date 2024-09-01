@@ -22,10 +22,18 @@ export const TailwindThemeConfig = {
         lg: ['20px', '30px'],
         xl: ['24px', '32px'],
         '2xl': ['36px', '44px'],
+        'huge-headline': ['96px', '128px'],
+        'big-title': ['78px', '96px'],
+        title: ['48px', '64px'],
+        quote: ['40px', '40px'],
+        caption: ['18px', '32px'],
+        body: ['32px', '48px'],
       },
       fontFamily: {
-        text: ['var(--dm_sans)', 'Inter', ...defaultTheme.fontFamily.sans],
-        primary: ['var(--dm_serif)', 'Inter', ...defaultTheme.fontFamily.serif],
+        sans: ['var(--dm_sans)', ...defaultTheme.fontFamily.sans],
+        serif: ['var(--dm_serif)', ...defaultTheme.fontFamily.serif],
+        mono: ['var(--dm_mono)', ...defaultTheme.fontFamily.mono],
+        quote: ['var(--manum_pan)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
