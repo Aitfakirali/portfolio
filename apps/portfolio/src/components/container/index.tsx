@@ -9,7 +9,7 @@ export const Container = ({
   className?: string;
 }) => {
   return (
-    <div className={vclsx('max-w-6xl p-5 mx-auto md:p-10', className)}>
+    <div className={vclsx('max-w-7xl p-5 mx-auto md:p-10', className)}>
       {children}
     </div>
   );

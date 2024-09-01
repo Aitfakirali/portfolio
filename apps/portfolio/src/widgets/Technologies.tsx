@@ -23,7 +23,7 @@ const technologies = [
 
 export const Technologies = () => {
   return (
-    <Marquee direction='right' autoFill>
+    <Marquee className='py-20' direction='right' autoFill>
       {technologies.map((tech, index) => (
         <div className='p-3 bg-black' key={index}>
           <Image

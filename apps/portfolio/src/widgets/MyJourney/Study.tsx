@@ -4,11 +4,11 @@ import React from 'react';
 
 export const Study = () => {
   return (
-    <Container className='relative max-w-7xl'>
+    <Container className='relative'>
       <div className='relative pb-20'>
         <SolidArrow />
         <DashedArrow />
-        <Text className='md:max-w-sm relative md:absolute right-0 top-20'>
+        <Text className='md:max-w-sm relative md:absolute -right-10 top-20'>
           I started studying software engineering out of curiosity, but quickly
           discovered a passion for creating innovative solutions. The more I
           learned, the more I fell in love with the challenges and creativity it

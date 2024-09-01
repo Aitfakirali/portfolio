@@ -50,7 +50,7 @@ export const Hero = () => {
     //     <Image src='/shape_1.png' alt='shape' width={100} height={200} />
     //   </div>
     // </div>
-    <Container className='min-h-screen grid place-content-center gap-20'>
+    <Container className='max-h-screen grid place-content-center gap-20'>
       <Image
         src='/Avatar.png'
         alt=''
