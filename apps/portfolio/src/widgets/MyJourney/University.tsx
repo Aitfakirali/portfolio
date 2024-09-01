@@ -3,7 +3,7 @@ import { Image, Text } from '@portfolio/ui';
 
 export const University = () => {
   return (
-    <Container className='max-w-6xl space-y-20'>
+    <Container className='max-w-6xl space-y-10'>
       <div className='flex flex-col gap-5 md:flex-row items-center w-full '>
         <Text
           className='text-transparent bg-gradient-to-r from-[#C0F0FF] to-[#A9FE81] bg-clip-text'
@@ -15,7 +15,7 @@ export const University = () => {
         <CurvedArrow />
       </div>
 
-      <div className='flex flex-col md:flex-row gap-10 py-10 justify-between'>
+      <div className='flex flex-col md:flex-row gap-10 justify-between'>
         <div className='space-y-6 flex-1 md:max-w-md'>
           <div className='space-y-2'>
             <Text
@@ -41,7 +41,7 @@ export const University = () => {
           </div>
         </div>
         <div className='flex-1 flex items-center justify-center py-10'>
-          <div className='bg-white p-4 rotate-12 space-y-4'>
+          <div className='bg-white p-4 rotate-12 scale-[.9] sm:scale-100 space-y-4'>
             <Image
               src='/fsb0.webp'
               alt=''

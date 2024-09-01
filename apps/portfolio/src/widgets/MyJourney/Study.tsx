@@ -5,19 +5,20 @@ import React from 'react';
 export const Study = () => {
   return (
     <Container className='relative max-w-7xl'>
-      <SolidArrow />
-      <DashedArrow />
+      <div className='relative pb-20'>
+        <SolidArrow />
+        <DashedArrow />
+        <Text className='md:max-w-sm relative md:absolute right-0 top-20'>
+          I started studying software engineering out of curiosity, but quickly
+          discovered a passion for creating innovative solutions. The more I
+          learned, the more I fell in love with the challenges and creativity it
+          offered.
+        </Text>
+      </div>
 
-      <Text className='md:max-w-sm relative pb-40 md:absolute right-0 top-20'>
-        I started studying software engineering out of curiosity, but quickly
-        discovered a passion for creating innovative solutions. The more I
-        learned, the more I fell in love with the challenges and creativity it
-        offered.
-      </Text>
-
-      <div className='flex flex-col md:flex-row py-10 gap-20 px-5'>
-        <div className='flex-1 flex items-center justify-center'>
-          <div className='bg-white py-4 -rotate-12 space-y-4'>
+      <div className='flex flex-col md:flex-row items-center gap-20'>
+        <div className='flex-1 flex items-center justify-center py-10'>
+          <div className='bg-white py-4 -rotate-12 scale-[.9] sm:scale-100 space-y-4 p-4'>
             <Image
               src='/ensa.jpg'
               alt=''

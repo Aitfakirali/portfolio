@@ -9,6 +9,11 @@
   }
 } */
 
+@layer base {
+  * {
+  }
+}
+
 input[type='range'].defaultInputRangeThumb::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 32px;

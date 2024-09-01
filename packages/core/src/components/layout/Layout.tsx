@@ -13,7 +13,11 @@ export const Layout = ({
 }) => {
   return (
     <div className={vclsx('relative', className)}>
-      <div className={vclsx('min-h-screen bg-black text-white')}>
+      <div
+        className={vclsx(
+          'min-h-screen bg-black text-white max-w-screen overflow-hidden',
+        )}
+      >
         {children}
       </div>
     </div>
